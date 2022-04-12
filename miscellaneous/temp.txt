@@ -1,0 +1,44 @@
+New-AzResourceGroup -Name ToyWebsiteTest -Location eastus
+ResourceGroupName : ToyWebsiteTest
+Location          : eastus
+ProvisioningState : Succeeded
+Tags              : 
+ResourceId        : /subscriptions/326d4d2f-4870-45f2-b2d7-feca7a38b1e9/resourceGroups/ToyWebsiteTest
+
+$resourceGroupId = '/subscriptions/326d4d2f-4870-45f2-b2d7-feca7a38b1e9/resourceGroups/ToyWebsiteTest'
+
+az ad sp create-for-rbac --name ToyWebsiteTest --role Contributor --scopes /subscriptions/326d4d2f-4870-45f2-b2d7-feca7a38b1e9/resourceGroups/ToyWebsiteTest --sdk-auth
+{
+  "clientId": "a7b97419-31fb-4ac9-9348-74c1aeb9aad1",
+  "clientSecret": "iLG3xLIaFIDOiSsgZdzg5sRzmYjmYiiV-i",
+  "subscriptionId": "326d4d2f-4870-45f2-b2d7-feca7a38b1e9",
+  "tenantId": "dcde8d90-9fa8-4b27-bf98-7789b7cfd18a",
+  "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
+  "resourceManagerEndpointUrl": "https://management.azure.com/",
+  "activeDirectoryGraphResourceId": "https://graph.windows.net/",
+  "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
+  "galleryEndpointUrl": "https://gallery.azure.com/",
+  "managementEndpointUrl": "https://management.core.windows.net/"
+}
+
+
+New-AzResourceGroup -Name ToyWebsiteProduction -Location eastus
+ResourceGroupName : ToyWebsiteProduction
+Location          : eastus
+ProvisioningState : Succeeded
+Tags              : 
+ResourceId        : /subscriptions/326d4d2f-4870-45f2-b2d7-feca7a38b1e9/resourceGroups/ToyWebsiteProduction
+
+az ad sp create-for-rbac --name ToyWebsiteProduction --role Contributor --scopes /subscriptions/326d4d2f-4870-45f2-b2d7-feca7a38b1e9/resourceGroups/ToyWebsiteProduction --sdk-auth
+{
+  "clientId": "dfad3acf-0eab-4dbc-ae5a-a2f6cff5b58e",
+  "clientSecret": "rHzMw8JtE4RjhAxyUfz.-~9vZvtRUgtVsX",
+  "subscriptionId": "326d4d2f-4870-45f2-b2d7-feca7a38b1e9",
+  "tenantId": "dcde8d90-9fa8-4b27-bf98-7789b7cfd18a",
+  "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
+  "resourceManagerEndpointUrl": "https://management.azure.com/",
+  "activeDirectoryGraphResourceId": "https://graph.windows.net/",
+  "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
+  "galleryEndpointUrl": "https://gallery.azure.com/",
+  "managementEndpointUrl": "https://management.core.windows.net/"
+}
