@@ -20,7 +20,7 @@ jobs:
   # Deploy to the test environment.
   deploy-test:
     uses: kpothuri/toy-website-end-to-end/.github/workflows/deploy.yml@main
-    needs: [build,lint]
+    needs: [build, lint]
     with:
       environmentType: Test
       resourceGroupName: ToyWebsiteTest
@@ -34,7 +34,7 @@ jobs:
   # Deploy to the production environment.
   deploy-production:
     uses: kpothuri/toy-website-end-to-end/.github/workflows/deploy.yml@main
-    needs: 
+    needs:
     - lint
     - build
     - deploy-test
